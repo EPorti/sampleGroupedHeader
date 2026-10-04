@@ -1,4 +1,4 @@
-#include "groupedheader.h" 
+#include "groupedheader.h"
 
 #include <QApplication>
 #include <QStandardItemModel>
@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
         for (int column = 0; column < model->columnCount(); ++column)
             model->setItem(row, column, new QStandardItem(QString("%1").arg((row + 1) * (column + 1))));
     }
+    // Set up the table view with the grouped header
 
     QTableView table;
     table.setWindowTitle("Grouped device headers");
